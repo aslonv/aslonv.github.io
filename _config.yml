@@ -1,0 +1,26 @@
+# Jekyll configuration for aslonv.github.io
+title: "Bekali Aslonov"
+description: "systems, engineering, and the belief that constraints are mostly imaginary"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Sass/SCSS configuration
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-sass-converter
+
+# Site configuration
+baseurl: ""
+url: "https://aslonv.github.io"
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - .gitignore

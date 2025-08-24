@@ -6,7 +6,7 @@ title: "Bekali Aslonov"
 # Bekali Aslonov
 <p class="tagline">systems, engineering, and the belief that constraints are mostly imaginary</p>
 
-<div class="section">
+<div class="section" markdown="1">
 
 ## Some things about me:
 
@@ -22,7 +22,7 @@ title: "Bekali Aslonov"
 
 </div>
 
-<div class="section">
+<div class="section" markdown="1">
 
 ## Things I believe:
 
@@ -88,7 +88,7 @@ title: "Bekali Aslonov"
 
 </div>
 
-<div class="section">
+<div class="section" markdown="1">
 
 ## Current focus:
 
@@ -99,7 +99,7 @@ title: "Bekali Aslonov"
 
 </div>
 
-<div class="section">
+<div class="section" markdown="1">
 
 ## Find me:
 

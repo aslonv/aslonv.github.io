@@ -2,13 +2,14 @@
 layout: home
 title: "Bekali Aslonov"
 ---
-# Bekali Aslonov
+
+Bekali Aslonov
 
 About:
 
 systems, engineering and design
 
-## Things I Believe to be true
+### Things I Believe to be true
 
 - **Abundance of Earth's Resources:**  
   The idea that we don't have enough resources on Earth for humans is simply not true.  

@@ -3,6 +3,70 @@ layout: home
 title: "Bekali Aslonov"
 ---
 
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 36px;
+  margin-bottom: 16px;
+  color: #000;
+}
+ul {
+  margin: 16px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+ul ul {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  list-style-type: circle;
+}
+ul ul li {
+  margin-bottom: 4px;
+  font-size: 15px;
+  color: #555;
+}
+strong {
+  font-weight: 600;
+  color: #000;
+}
+.tagline {
+  color: #666;
+  font-style: italic;
+  margin-top: -4px;
+  margin-bottom: 32px;
+  font-size: 16px;
+}
+.section {
+  margin-bottom: 32px;
+}
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+</style>
+
 # Bekali Aslonov
 <p class="tagline">systems & engineering</p>
 

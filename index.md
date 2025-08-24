@@ -4,7 +4,7 @@ title: "Bekali Aslonov"
 ---
 
 # Bekali Aslonov
-<p class="tagline">systems, engineering, and the belief that constraints are mostly imaginary</p>
+<p class="tagline">systems & engineering</p>
 
 <div class="section">
 

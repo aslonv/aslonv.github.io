@@ -1,76 +1,11 @@
 ---
-layout: home
+layout: page
 title: "Bekali Aslonov"
 ---
 
-<style>
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-h1 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  letter-spacing: -0.5px;
-}
-h2 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 36px;
-  margin-bottom: 16px;
-  color: #000;
-}
-ul {
-  margin: 16px 0;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-}
-ul ul {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  list-style-type: circle;
-}
-ul ul li {
-  margin-bottom: 4px;
-  font-size: 15px;
-  color: #555;
-}
-strong {
-  font-weight: 600;
-  color: #000;
-}
-.tagline {
-  color: #666;
-  font-style: italic;
-  margin-top: -4px;
-  margin-bottom: 32px;
-  font-size: 16px;
-}
-.section {
-  margin-bottom: 32px;
-}
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-</style>
-
 # Bekali Aslonov
-<p class="tagline">systems & engineering</p>
 
-<div class="section">
+*systems & engineering*
 
 ## Some things about me:
 
@@ -83,10 +18,6 @@ a:hover {
 * Live in Turin, Italy — Europe's best-kept secret for deep tech
 * Working on zero-knowledge identity systems and distributed inference
 * Believe the world has enough of everything, just terrible distribution
-
-</div>
-
-<div class="section">
 
 ## Things I believe:
 
@@ -150,10 +81,6 @@ a:hover {
   * One motivated person with modern tools can outperform entire departments from 10 years ago
   * The permission you're waiting for will never come — ship it
 
-</div>
-
-<div class="section">
-
 ## Current focus:
 
 * Building privacy-preserving identity systems with zero-knowledge proofs
@@ -161,14 +88,8 @@ a:hover {
 * Publishing research on ethical AI in medical training
 * Exploring neuromorphic computing architectures
 
-</div>
-
-<div class="section">
-
 ## Find me:
 
-* Twitter/X: [aslonv](https://x.com/aslonv)
+* Twitter/X: [@aslonv](https://x.com/aslonv)
 * GitHub: [github.com/aslonv](https://github.com/aslonv)
 * Email: bekali [at] aslonov [dot] com
-
-</div>

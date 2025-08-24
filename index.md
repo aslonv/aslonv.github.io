@@ -15,11 +15,13 @@ title: "Bekali Aslonov"
 
 ## Things that I believe as true:
 
+
 * **Earth's resources are abundant**
   * We produce enough food for 10+ billion people — distribution and waste are the real problems
   * Solar power in North Africa's deserts could supply 40x the world's electricity demand
   * A 500W solar panel needs only ~1kg of refined silicon with energy payback in months, not years
   * Scarcity is manufactured by inefficiency, politics, and lack of imagination
+
 
 * **The overpopulation narrative is destructive nihilism**
   * We're facing population decline so severe that entire cultures could disappear
@@ -27,17 +29,21 @@ title: "Bekali Aslonov"
   * More humans = more problem solvers = better future
   * The carrying capacity of Earth with current tech is probably 100+ billion
 
+
 * **Speed is a feature, not a bug**
   * You learn faster by colliding with reality more frequently
   * A week is 2% of the year — act accordingly
+
 
 * **Systems thinking beats component optimization**
   * The bottleneck is rarely where you think it is
   * Most "impossible" problems are just badly framed questions
 
+
 * **AI must be human-centered, not human-replacing**
   * The goal isn't AGI, it's augmented human intelligence
   * Ethics isn't a constraint on AI development — it's the foundation
+
  
 * **Small teams build the future**
   * 5 best engineers > 50 good ones
@@ -45,17 +51,20 @@ title: "Bekali Aslonov"
   * Consensus is where good ideas go to die
   * Give individuals maximum agency and accountability
 
+
 * **Energy abundance changes everything**
   * Cheap energy makes previously impossible things trivial
   * Solar + batteries already won — we're just watching deployment
   * Desalination, vertical farming, and carbon capture become obvious at <$0.01/kWh
   * The Kardashev Scale is a when, not an if
 
+
 * **You can do more than you think**
   * Most limitations are social conventions, not laws of physics
   * The distance between idea and implementation is shrinking exponentially
   * One motivated person with modern tools can outperform entire departments from 10 years ago
   * The permission you're waiting for will never come — ship it
+
 
 ## Current focus:
 

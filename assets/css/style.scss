@@ -98,3 +98,37 @@ a:hover {
   margin-top: -24px;
   margin-bottom: 32px;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 16px;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 16px;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px 12px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 15px;
+  }
+  
+  .tagline {
+    font-size: 15px;
+  }
+}

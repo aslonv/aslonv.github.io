@@ -9,17 +9,11 @@ title: "Bekali Aslonov"
 
 ## Some things about me:
 
-* Grew up in Uzbekistan, educated across three continents
-* On the Internet since 2008, building things since 2016
-* Studying Computer Engineering at Politecnico di Torino + International Economics at Georgetown
-* Published researcher in AI ethics and medical technology (47 citations and counting)
-* Led team SAM to qualify for Africa & Arab Programming Championships
-* Software/ML Engineer at eyeTech, bridging research and production
-* Live in Turin, Italy — Europe's best-kept secret for deep tech
-* Working on zero-knowledge identity systems and distributed inference
-* Believe the world has enough of everything, just terrible distribution
+* Grew up in Tashkent, Uzbekistan
+* Studying Computer Engineering at Politecnico di Torino. Attended Georgetown School of Foreign Service in Qatar, economics program
+* Background in maths olympiads and competitive programming
 
-## Things I believe:
+## Things that I believe as true:
 
 * **Earth's resources are abundant**
   * We produce enough food for 10+ billion people — distribution and waste are the real problems
@@ -33,41 +27,23 @@ title: "Bekali Aslonov"
   * More humans = more problem solvers = better future
   * The carrying capacity of Earth with current tech is probably 100+ billion
 
-* **Every user interaction is a miracle**
-  * When someone uses your app, treat each tap as sacred and scarce
-  * Every calorie expended should benefit the network or another user
-  * Single-player features in social apps compound into network death
-  * Be extraordinarily intentional with every surface — don't waste the gift of attention
-
 * **Speed is a feature, not a bug**
   * You learn faster by colliding with reality more frequently
-  * Perfect is the enemy of shipped
   * A week is 2% of the year — act accordingly
-  * Most "technical debt" is actually organizational debt
 
 * **Systems thinking beats component optimization**
-  * Distributed systems are more resilient than they are complex
   * The bottleneck is rarely where you think it is
   * Most "impossible" problems are just badly framed questions
-  * Zero-knowledge proofs will reshape identity and privacy
 
 * **AI must be human-centered, not human-replacing**
   * The goal isn't AGI, it's augmented human intelligence
   * Ethics isn't a constraint on AI development — it's the foundation
-  * Medical AI should empower doctors, not replace them
-  * Privacy-preserving ML is possible and necessary
-
+ 
 * **Small teams build the future**
-  * 5 excellent engineers > 50 good ones
+  * 5 best engineers > 50 good ones
   * Most tech companies are 2-10x overstaffed
   * Consensus is where good ideas go to die
   * Give individuals maximum agency and accountability
-
-* **The market for technological courage is inefficient**
-  * Most "impossible" things haven't been seriously attempted
-  * The best opportunities exist where others see constraints
-  * In many domains, 100 people shape the entire field
-  * Technical risk is overpriced, execution risk is underpriced
 
 * **Energy abundance changes everything**
   * Cheap energy makes previously impossible things trivial
@@ -83,13 +59,9 @@ title: "Bekali Aslonov"
 
 ## Current focus:
 
-* Building privacy-preserving identity systems with zero-knowledge proofs
-* Optimizing distributed inference for edge AI deployment
-* Publishing research on ethical AI in medical training
-* Exploring neuromorphic computing architectures
+* Building privacy-preserving identity system with zero-knowledge proofs
+* Exploring edge node running AI inference to generate pixels and audio
 
-## Find me:
+## Repos:
 
-* Twitter/X: [@aslonv](https://x.com/aslonv)
 * GitHub: [github.com/aslonv](https://github.com/aslonv)
-* Email: bekali [at] aslonov [dot] com

@@ -4,71 +4,107 @@ title: "Bekali Aslonov"
 ---
 
 # Bekali Aslonov
+<p class="tagline">systems, engineering, and the belief that constraints are mostly imaginary</p>
 
-<p class="lead">Rising AI Researcher and Systems Engineer</p>
+<div class="section">
 
-Bekali Aslonov emerges as a sophisticated engineer-researcher bridging advanced computing systems with medical technology applications, combining academic rigor with practical innovation. His dual educational background in computer engineering and international economics positions him uniquely at the intersection of technical excellence and global economic understanding. With 47 academic citations and multiple high-impact publications, he represents the new generation of interdisciplinary researchers tackling complex ethical and technical challenges in AI and healthcare.
+## Some things about me:
 
-Currently based in Turin, Italy, Aslonov works as a Software/ML Engineer at eyeTech while maintaining active research affiliations with prestigious institutions across multiple continents. His work demonstrates a rare combination of theoretical depth and practical application, from zero-knowledge cryptographic systems to ethical AI frameworks for medical training.
+* Grew up in Uzbekistan, educated across three continents
+* On the Internet since 2008, building things since 2016
+* Studying Computer Engineering at Politecnico di Torino + International Economics at Georgetown
+* Published researcher in AI ethics and medical technology (47 citations and counting)
+* Led team SAM to qualify for Africa & Arab Programming Championships
+* Software/ML Engineer at eyeTech, bridging research and production
+* Live in Turin, Italy — Europe's best-kept secret for deep tech
+* Working on zero-knowledge identity systems and distributed inference
+* Believe the world has enough of everything, just terrible distribution
 
-## Academic Excellence Spans Two Continents
+</div>
 
-Aslonov's educational journey reflects his global perspective and interdisciplinary approach. He is currently completing his studies at Georgetown University's School of Foreign Service in Qatar, majoring in International Economics with an expected graduation in 2025. Simultaneously, he holds a Bachelor of Engineering degree from Politecnico di Torino's Department of Control and Computer Engineering in Italy, one of Europe's most prestigious technical universities.
+<div class="section">
 
-This unique combination of economics and engineering education provides him with both the technical depth to innovate and the economic framework to understand technology's broader societal implications. His academic work spans institutional boundaries, with research collaborations extending from Georgetown University Qatar to Carnegie Mellon University Qatar and Mohammed V University in Morocco.
+## Things I believe:
 
-Before his current studies, Aslonov attended the Academic Lyceum of Computer Technologies under Tashkent State Technical University, establishing his early foundation in computational systems.
+* **Earth's resources are abundant**
+  * We produce enough food for 10+ billion people — distribution and waste are the real problems
+  * Solar power in North Africa's deserts could supply 40x the world's electricity demand
+  * A 500W solar panel needs only ~1kg of refined silicon with energy payback in months, not years
+  * Scarcity is manufactured by inefficiency, politics, and lack of imagination
 
-## Breakthrough Research in Medical AI Ethics
+* **The overpopulation narrative is destructive nihilism**
+  * We're facing population decline so severe that entire cultures could disappear
+  * Every major city on Earth could fit in Texas with suburban density
+  * More humans = more problem solvers = better future
+  * The carrying capacity of Earth with current tech is probably 100+ billion
 
-Aslonov's academic publications demonstrate remarkable productivity and impact for an emerging researcher. His ResearchGate profile shows 47 citations and 264 reads, indicating significant engagement with his work in the research community.
+* **Every user interaction is a miracle**
+  * When someone uses your app, treat each tap as sacred and scarce
+  * Every calorie expended should benefit the network or another user
+  * Single-player features in social apps compound into network death
+  * Be extraordinarily intentional with every surface — don't waste the gift of attention
 
-His most significant contribution, **"Humanizing AI in medical training: ethical framework for responsible design,"** published in *Frontiers in Artificial Intelligence* in May 2023, addresses one of the most pressing challenges in modern healthcare technology. The paper proposes a comprehensive five-pillar ethical framework encompassing transparency, fairness, safety, accountability, and collaboration. This work positions him as a thought leader in responsible AI development, particularly in high-stakes medical environments.
+* **Speed is a feature, not a bug**
+  * You learn faster by colliding with reality more frequently
+  * Perfect is the enemy of shipped
+  * A week is 2% of the year — act accordingly
+  * Most "technical debt" is actually organizational debt
 
-His second major publication, **"Eye tracking technology in medical practice: a perspective on its diverse applications,"** published in *Frontiers in Medical Technology* in November 2023, demonstrates his technical depth in computer vision applications. The comprehensive review explores eye tracking across multiple medical disciplines including neurology, cardiology, and surgery, showcasing his ability to synthesize complex technical concepts across interdisciplinary boundaries.
+* **Systems thinking beats component optimization**
+  * Distributed systems are more resilient than they are complex
+  * The bottleneck is rarely where you think it is
+  * Most "impossible" problems are just badly framed questions
+  * Zero-knowledge proofs will reshape identity and privacy
 
-Both publications are open access, maximizing their potential impact and demonstrating his commitment to knowledge sharing in critical areas of medical technology.
+* **AI must be human-centered, not human-replacing**
+  * The goal isn't AGI, it's augmented human intelligence
+  * Ethics isn't a constraint on AI development — it's the foundation
+  * Medical AI should empower doctors, not replace them
+  * Privacy-preserving ML is possible and necessary
 
-## Technical Innovation Through High-Performance Systems
+* **Small teams build the future**
+  * 5 excellent engineers > 50 good ones
+  * Most tech companies are 2-10x overstaffed
+  * Consensus is where good ideas go to die
+  * Give individuals maximum agency and accountability
 
-Aslonov's GitHub portfolio reveals 18 repositories showcasing sophisticated technical expertise across multiple domains. His projects demonstrate a systems thinking approach combined with deep technical implementation skills.
+* **The market for technological courage is inefficient**
+  * Most "impossible" things haven't been seriously attempted
+  * The best opportunities exist where others see constraints
+  * In many domains, 100 people shape the entire field
+  * Technical risk is overpriced, execution risk is underpriced
 
-His **Number-Theoretic Transform implementation with AVX2 acceleration** showcases expertise in high-performance computing, optimizing mathematical operations at the hardware level. Written in Rust and supporting 61-bit primes with AVX2 optimization for 31-bit primes, this project demonstrates his belief in computational efficiency and performance optimization.
+* **Energy abundance changes everything**
+  * Cheap energy makes previously impossible things trivial
+  * Solar + batteries already won — we're just watching deployment
+  * Desalination, vertical farming, and carbon capture become obvious at <$0.01/kWh
+  * The Kardashev Scale is a when, not an if
 
-The **distributed inference system project** reveals his approach to scalable AI architecture. Built in Python with microservices design, it supports multiple neural network models including MobileNet, ResNet18, and EfficientNet. This fault-tolerant system reflects his preference for resilient, distributed architectures over monolithic approaches.
+* **You can do more than you think**
+  * Most limitations are social conventions, not laws of physics
+  * The distance between idea and implementation is shrinking exponentially
+  * One motivated person with modern tools can outperform entire departments from 10 years ago
+  * The permission you're waiting for will never come — ship it
 
-His **neurobiomorphic AI system** combines neuroplasticity, reinforcement learning, and language reasoning capabilities, indicating his interest in bio-inspired computing models that could lead to more general intelligence systems.
+</div>
 
-Most notably, his **ZKPersonhood project** demonstrates cutting-edge work in zero-knowledge proof systems for identity verification, positioning him at the forefront of privacy-preserving technologies and decentralized identity solutions.
+<div class="section">
 
-## Competition Excellence and Collaborative Leadership
+## Current focus:
 
-In November 2021, Aslonov demonstrated his competitive programming skills by leading team "SAM" to a top 5 finish in the Qatar Collegiate Programming Competition, competing against over 50 students from 18 teams. The achievement qualified his team for the 24th Africa and Arab Collegiate Programming Championship in Egypt.
+* Building privacy-preserving identity systems with zero-knowledge proofs
+* Optimizing distributed inference for edge AI deployment
+* Publishing research on ethical AI in medical training
+* Exploring neuromorphic computing architectures
 
-His approach to the competition reveals his philosophical stance: 
+</div>
 
-> "My programming background is mostly about building and designing business-related products. So it was a great experience to implement more mathematical and systemic methods."
+<div class="section">
 
-This quote illuminates his practical orientation toward technology development and his continuous learning mindset.
+## Find me:
 
-## Technical Philosophy and Systems Approach
+* Twitter/X: [aslonv](https://x.com/aslonv)
+* GitHub: [github.com/aslonv](https://github.com/aslonv)
+* Email: bekali [at] aslonov [dot] com
 
-Aslonov's work reveals a coherent technical philosophy centered on several key principles. His emphasis on distributed systems and fault tolerance suggests belief in resilient architectures that can handle real-world complexity. His zero-knowledge proof work indicates strong conviction about privacy-preserving technologies and user sovereignty over personal data.
-
-His projects span from low-level hardware optimization to high-level AI systems, indicating belief in full-stack technical understanding. His choice of programming languages—primarily Rust and Python—reflects pragmatic tool selection prioritizing both performance and productivity.
-
-The intersection of his medical AI research with his systems engineering projects suggests he views technology as most valuable when it addresses real human needs, particularly in healthcare where reliability and ethics are paramount.
-
-## Global Research Network and Collaborative Impact
-
-Aslonov's research demonstrates extensive international collaboration. His publications include co-authors from institutions across Qatar, Italy, Morocco, and the UAE, reflecting his ability to work effectively across cultural and institutional boundaries.
-
-His current role as Software/ML Engineer at eyeTech while maintaining research activities suggests his commitment to bridging the research-to-practice gap. This dual engagement with industry and academia positions him to understand both the theoretical possibilities and practical constraints of advanced technology implementation.
-
-## Engineering the Future Responsibly
-
-Bekali Aslonov represents the emerging generation of engineer-researchers who combine technical excellence with ethical responsibility and global perspective. His work addresses some of the most challenging questions in modern technology: How do we build AI systems that are both powerful and ethical? How do we create distributed systems that are both performant and resilient? How do we preserve privacy while enabling innovation?
-
-His trajectory suggests someone positioned to make significant contributions at the intersection of advanced computing, healthcare technology, and ethical AI development. With growing academic citations, sophisticated technical projects, and a demonstrated commitment to responsible innovation, Aslonov is establishing himself as a thoughtful leader in the next generation of technology development.
-
-His unique combination of computer engineering expertise, economic understanding, and ethical framework development positions him to tackle the complex sociotechnical challenges that will define the future of AI and medical technology. As healthcare increasingly relies on AI systems, researchers like Aslonov who can navigate both the technical complexity and ethical implications will be essential for responsible innovation.
+</div>

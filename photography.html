@@ -189,15 +189,15 @@
             z-index: 9999;
             left: 0;
             top: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             background: rgba(0,0,0,0.95);
         }
 
         .modal-content {
             position: relative;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -409,23 +409,7 @@
             }, 100);
         }, { passive: true });
 
-        // Dynamic image loading
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load Italy images
-            const italyGrid = document.getElementById('italy-grid');
-            italyImages.forEach(function(filename) {
-                createPhotoItem(italyGrid, 'photos/Italy/' + filename, 'Italy photo');
-            });
 
-            // Load Switzerland images
-            const switzerlandGrid = document.getElementById('switzerland-grid');
-            switzerlandImages.forEach(function(filename) {
-                createPhotoItem(switzerlandGrid, 'photos/Switzerland/' + filename, 'Switzerland photo');
-            });
-
-            // Setup image loading handlers
-            setupImageLoading();
-        });
 
         function createPhotoItem(grid, src, alt) {
             const photoItem = document.createElement('div');
@@ -527,7 +511,7 @@
             document.getElementById('modalImage').src = currentImages[currentImageIndex].src;
         }
 
-        // Dynamic image loading
+        // Modal event listeners - FIXED
         document.addEventListener('DOMContentLoaded', function() {
             // Load Italy images
             const italyGrid = document.getElementById('italy-grid');
@@ -544,7 +528,7 @@
             // Setup image loading handlers
             setupImageLoading();
 
-            // Modal event listeners - FIXED
+            // Modal event listeners
             document.querySelector('.modal-close').addEventListener('click', closeModal);
             document.querySelector('.modal-prev').addEventListener('click', previousImage);
             document.querySelector('.modal-next').addEventListener('click', nextImage);
@@ -565,16 +549,6 @@
                     if (e.key === 'ArrowLeft') previousImage();
                 }
             });
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            const modal = document.getElementById('photoModal');
-            if (modal.style.display === 'block') {
-                if (e.key === 'Escape') closeModal(e);
-                if (e.key === 'ArrowRight') nextImage(e);
-                if (e.key === 'ArrowLeft') previousImage(e);
-            }
         });
 
         // Smooth scrolling for navigation

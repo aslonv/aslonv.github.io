@@ -122,6 +122,33 @@
             transform: scale(1.1);
         }
 
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem 1.5rem 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .photo-item:hover .photo-overlay {
+            opacity: 1;
+        }
+
+        .photo-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .photo-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
         /* Modal Styles */
         .modal {
             display: none;
@@ -136,19 +163,19 @@
         }
 
         .modal-content {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         .modal img {
-            max-width: 100vw;
-            max-height: 100vh;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
 
@@ -217,17 +244,48 @@
             }
         }
 
-        /* Loading animation */
-        .photo-item img {
-            transition: opacity 0.3s ease;
+        /* Skeleton loader - optimized for performance */
+        .photo-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+            background-size: 200% 100%;
+            border-radius: 8px;
+            /* Pause animation during scrolling to improve performance */
+            animation: loading 1.5s infinite;
+            animation-play-state: running;
         }
 
-        .photo-item img[data-loaded="false"] {
-            opacity: 0;
+        .scrolling .photo-item::before {
+            animation-play-state: paused;
         }
 
-        .photo-item img[data-loaded="true"] {
-            opacity: 1;
+        .photo-item img[data-loaded="true"] + .photo-item::before {
+            display: none;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Enhanced performance optimizations */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            /* GPU acceleration for container */
+            transform: translateZ(0);
+        }
+
+        .country-section {
+            margin-bottom: 6rem;
+            /* Contain layout changes */
+            contain: layout;
         }
     </style>
 </head>
@@ -240,6 +298,8 @@
     <nav class="nav">
         <a href="index.html">← Back to Home</a>
         <a href="#italy">Italy</a>
+        <a href="#qatar">Qatar</a>
+        <a href="#germany">Germany</a>
         <a href="#switzerland">Switzerland</a>
     </nav>
 
@@ -247,8 +307,70 @@
         <!-- Italy Section -->
         <section id="italy" class="country-section">
             <h2 class="country-title">Italy</h2>
-            <div class="photo-grid" id="italy-grid">
-                <!-- Photos will be dynamically loaded -->
+            <div class="photo-grid">
+                <div class="photo-item" onclick="openModal(this)">
+                    <img src="photos/Italy/photo1.jpg" alt="Italian landscape" data-loaded="false">
+                    <div class="photo-overlay">
+                        <div class="photo-title">Venetian Sunset</div>
+                        <div class="photo-description">Golden hour over the canals of Venice</div>
+                    </div>
+                </div>
+                <div class="photo-item" onclick="openModal(this)">
+                    <img src="photos/Italy/photo2.jpg" alt="Italian architecture" data-loaded="false">
+                    <div class="photo-overlay">
+                        <div class="photo-title">Roman Architecture</div>
+                        <div class="photo-description">Ancient meets modern in the eternal city</div>
+                    </div>
+                </div>
+                <div class="photo-item" onclick="openModal(this)">
+                    <img src="photos/Italy/photo3.jpg" alt="Italian cuisine" data-loaded="false">
+                    <div class="photo-overlay">
+                        <div class="photo-title">Tuscan Countryside</div>
+                        <div class="photo-description">Rolling hills and cypress trees</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qatar Section -->
+        <section id="qatar" class="country-section">
+            <h2 class="country-title">Qatar</h2>
+            <div class="photo-grid">
+                <div class="photo-item" onclick="openModal(this)">
+                    <img src="photos/Qatar/photo1.jpg" alt="Doha skyline" data-loaded="false">
+                    <div class="photo-overlay">
+                        <div class="photo-title">Doha at Night</div>
+                        <div class="photo-description">The modern skyline reflecting in the bay</div>
+                    </div>
+                </div>
+                <div class="photo-item" onclick="openModal(this)">
+                    <img src="photos/Qatar/photo2.jpg" alt="Desert landscape" data-loaded="false">
+                    <div class="photo-overlay">
+                        <div class="photo-title">Desert Dunes</div>
+                        <div class="photo-description">Endless sands under the Arabian sky</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Germany Section -->
+        <section id="germany" class="country-section">
+            <h2 class="country-title">Germany</h2>
+            <div class="photo-grid">
+                <div class="photo-item" onclick="openModal(this)">
+                    <img src="photos/Germany/photo1.jpg" alt="German castle" data-loaded="false">
+                    <div class="photo-overlay">
+                        <div class="photo-title">Neuschwanstein</div>
+                        <div class="photo-description">Fairy tale castle in the Bavarian Alps</div>
+                    </div>
+                </div>
+                <div class="photo-item" onclick="openModal(this)">
+                    <img src="photos/Germany/photo2.jpg" alt="Berlin street" data-loaded="false">
+                    <div class="photo-overlay">
+                        <div class="photo-title">Berlin Streets</div>
+                        <div class="photo-description">Urban life in the capital</div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -257,19 +379,18 @@
             <h2 class="country-title">Switzerland</h2>
             <div class="photo-grid">
                 <div class="photo-item" onclick="openModal(this)">
-                    <img src="photos/Switzerland/20250715_101858(0).jpg" alt="Swiss Alps" data-loaded="false">
+                    <img src="photos/Switzerland/photo1.jpg" alt="Swiss Alps" data-loaded="false">
+                    <div class="photo-overlay">
+                        <div class="photo-title">Matterhorn Peak</div>
+                        <div class="photo-description">Iconic mountain reflected in a pristine lake</div>
+                    </div>
                 </div>
                 <div class="photo-item" onclick="openModal(this)">
-                    <img src="photos/Switzerland/20250715_144953.jpg" alt="Swiss village" data-loaded="false">
-                </div>
-                <div class="photo-item" onclick="openModal(this)">
-                    <img src="photos/Switzerland/20250715_145209.jpg" alt="Swiss landscape" data-loaded="false">
-                </div>
-                <div class="photo-item" onclick="openModal(this)">
-                    <img src="photos/Switzerland/20250715_151418.jpg" alt="Swiss vista" data-loaded="false">
-                </div>
-                <div class="photo-item" onclick="openModal(this)">
-                    <img src="photos/Switzerland/20250715_151529.jpg" alt="Swiss nature" data-loaded="false">
+                    <img src="photos/Switzerland/photo2.jpg" alt="Swiss village" data-loaded="false">
+                    <div class="photo-overlay">
+                        <div class="photo-title">Alpine Village</div>
+                        <div class="photo-description">Traditional chalets nestled in the mountains</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -289,52 +410,8 @@
         let currentImageIndex = 0;
         let currentImages = [];
 
-        // List of all Italy images (auto-generated from folder scan)
-        const italyImages = [
-            '20230409_202913.jpg',
-            '20230414_190355.jpg',
-            '20230414_191651.jpg',
-            '20230414_192819.jpg',
-            '20230414_203510.jpg',
-            '20230417_141107.jpg',
-            '20230506_204750.jpg',
-            '20230623_213839.jpg',
-            '20230623_214309.jpg',
-            '20230703_211820.jpg',
-            '20230903_202158.jpg',
-            '20230909_190452.jpg',
-            '20230914_175814(1).jpg',
-            '20231015_185541.jpg',
-            '20231119_160103.jpg',
-            '20231119_171351.jpg',
-            '20231126_092058.jpg',
-            '20231126_093013.jpg',
-            '20231222_162224.jpg',
-            '20250502_181220.jpg',
-            '20250712_123611.jpg',
-            '20250720_100808.jpg',
-            '20250730_184045.jpg'
-        ];
-
-        // Dynamic image loading
+        // Image loading
         document.addEventListener('DOMContentLoaded', function() {
-            // Load Italy images dynamically
-            const italyGrid = document.getElementById('italy-grid');
-            italyImages.forEach(function(filename) {
-                const photoItem = document.createElement('div');
-                photoItem.className = 'photo-item';
-                photoItem.onclick = function() { openModal(this); };
-                
-                const img = document.createElement('img');
-                img.src = 'photos/Italy/' + filename;
-                img.alt = 'Italy photo';
-                img.setAttribute('data-loaded', 'false');
-                
-                photoItem.appendChild(img);
-                italyGrid.appendChild(photoItem);
-            });
-
-            // Image loading handlers
             const images = document.querySelectorAll('.photo-item img');
             images.forEach(img => {
                 img.onload = function() {

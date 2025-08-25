@@ -153,7 +153,7 @@
             transition: none;
         }
 
-        /* Skeleton loader - optimized for performance */
+        /* Skeleton loader - FIXED */
         .photo-item::before {
             content: '';
             position: absolute;
@@ -166,14 +166,24 @@
             border-radius: 8px;
             animation: loading 1.5s infinite;
             animation-play-state: running;
+            pointer-events: none;
         }
 
         .scrolling .photo-item::before {
             animation-play-state: paused;
         }
 
-        .photo-item img[data-loaded="true"] ~ .photo-item::before {
+        /* Hide skeleton when image is loaded - FIXED */
+        .photo-item.loaded::before {
             display: none;
+        }
+
+        .photo-item img[data-loaded="false"] {
+            opacity: 0;
+        }
+
+        .photo-item img[data-loaded="true"] {
+            opacity: 1;
         }
 
         @keyframes loading {
@@ -598,6 +608,8 @@
         function setupImageLoading() {
             const images = document.querySelectorAll('.photo-item img');
             images.forEach(img => {
+                const photoItem = img.closest('.photo-item');
+                
                 // Preload critical images immediately
                 const rect = img.getBoundingClientRect();
                 const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
@@ -610,6 +622,10 @@
                     requestAnimationFrame(() => {
                         this.setAttribute('data-loaded', 'true');
                         this.style.opacity = '1';
+                        // FIXED: Hide skeleton loader by adding class to parent
+                        if (photoItem) {
+                            photoItem.classList.add('loaded');
+                        }
                     });
                 };
                 
@@ -619,8 +635,16 @@
                     requestAnimationFrame(() => {
                         this.setAttribute('data-loaded', 'true');
                         this.style.opacity = '1';
+                        if (photoItem) {
+                            photoItem.classList.add('loaded');
+                        }
                     });
                 };
+                
+                // Force load if src is already set (cached images)
+                if (img.complete && img.naturalHeight !== 0) {
+                    img.onload();
+                }
             });
         }
 

@@ -3,10 +3,10 @@ layout: page
 title: "Bekali Aslonov"
 ---
 
-<!-- Photography Preloading Script -->
+<!-- Aggressive Photography Preloading Script -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // DNS prefetch for faster connections
+    // Immediate DNS prefetch and preconnect
     const dnsPrefetch = document.createElement('link');
     dnsPrefetch.rel = 'dns-prefetch';
     dnsPrefetch.href = '//raw.githubusercontent.com';
@@ -18,81 +18,87 @@ document.addEventListener('DOMContentLoaded', function() {
     preconnect.crossOrigin = 'anonymous';
     document.head.appendChild(preconnect);
 
-    // Find the photography link
-    const photoLink = document.querySelector('a[href="photography.html"]');
     let preloaded = false;
 
-    if (photoLink) {
-        // Create intersection observer to detect when link becomes visible
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !preloaded) {
-                    console.log('Photography link visible - starting preload...');
-                    startPreloading();
-                    preloaded = true;
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            rootMargin: '50px' // Start loading 50px before link is visible
-        });
+    // AGGRESSIVE: Start preloading after just 2 seconds on page
+    setTimeout(() => {
+        if (!preloaded) {
+            console.log('2 seconds elapsed - starting aggressive preload...');
+            startAggressivePreloading();
+            preloaded = true;
+        }
+    }, 2000);
 
-        observer.observe(photoLink);
+    // Also trigger on any scroll movement
+    window.addEventListener('scroll', () => {
+        if (!preloaded) {
+            console.log('User scrolled - starting immediate preload...');
+            startAggressivePreloading();
+            preloaded = true;
+        }
+    }, { once: true, passive: true });
 
-        // Backup: Also preload on hover for immediate response
-        photoLink.addEventListener('mouseenter', () => {
-            if (!preloaded) {
-                console.log('Photography link hovered - starting preload...');
-                startPreloading();
-                preloaded = true;
-            }
-        }, { once: true });
-    }
-
-    function startPreloading() {
-        // Preload the photography page itself
+    function startAggressivePreloading() {
+        // 1. Preload page immediately
         const pagePreload = document.createElement('link');
         pagePreload.rel = 'prefetch';
         pagePreload.href = 'photography.html';
         document.head.appendChild(pagePreload);
 
-        // Preload critical above-the-fold images
+        // 2. Load ALL critical images immediately (no staggering)
         const criticalImages = [
             'photos/Italy/20230409_202913.jpg',
             'photos/Switzerland/20250715_101858(0).jpg',
             'photos/Italy/20230414_190355.jpg',
-            'photos/Switzerland/20250715_144953.jpg'
+            'photos/Switzerland/20250715_144953.jpg',
+            'photos/Italy/20230414_191651.jpg',
+            'photos/Switzerland/20250715_145209.jpg',
+            'photos/Italy/20230414_192819.jpg',
+            'photos/Switzerland/20250715_151418.jpg'
         ];
 
-        criticalImages.forEach((src, index) => {
-            // Stagger the loading to avoid overwhelming the connection
-            setTimeout(() => {
-                const img = new Image();
-                img.src = src;
-                console.log(`Preloading image: ${src}`);
-            }, index * 200); // 200ms delay between each image
+        criticalImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
         });
+        console.log(`Aggressively preloaded ${criticalImages.length} images`);
 
-        // Preload CSS and other assets after a short delay
-        setTimeout(() => {
-            const cssPreload = document.createElement('link');
-            cssPreload.rel = 'prefetch';
-            cssPreload.href = 'photography.html';
-            cssPreload.as = 'document';
-            document.head.appendChild(cssPreload);
-        }, 1000);
+        // 3. Use requestIdleCallback for remaining images (if available)
+        const remainingImages = [
+            'photos/Italy/20230414_203510.jpg',
+            'photos/Italy/20230417_141107.jpg',
+            'photos/Italy/20230506_204750.jpg',
+            'photos/Italy/20230623_213839.jpg',
+            'photos/Italy/20230623_214309.jpg'
+        ];
+
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => {
+                remainingImages.forEach(src => {
+                    const img = new Image();
+                    img.src = src;
+                });
+                console.log(`Idle-loaded ${remainingImages.length} additional images`);
+            });
+        } else {
+            // Fallback for browsers without requestIdleCallback
+            setTimeout(() => {
+                remainingImages.forEach(src => {
+                    const img = new Image();
+                    img.src = src;
+                });
+            }, 3000);
+        }
     }
 
-    // Optional: Preload after user shows engagement (scrolling)
-    let hasScrolled = false;
-    window.addEventListener('scroll', () => {
-        if (!hasScrolled && !preloaded && window.scrollY > 200) {
-            console.log('User scrolled - starting preload...');
-            startPreloading();
+    // Enhanced hover preloading (instant response)
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.matches('a[href="photography.html"]') && !preloaded) {
+            console.log('Photography link hovered - instant preload!');
+            startAggressivePreloading();
             preloaded = true;
-            hasScrolled = true;
         }
-    }, { once: true });
+    });
 });
 </script>
 

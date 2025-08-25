@@ -112,6 +112,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
 ### Truths:
 
+* **Perceived global resource scarcity often stems from inequality in distribution, governmental mismanagement, and geopolitical conflicts, not absolute shortages, as policies in exporting countries artificially create limitations.**
+
+* **Desalination technology has advanced significantly, enabling the conversion of seawater into high-quality drinking water that meets stringent standards, with innovations like solar-powered systems potentially making it cheaper than tap water in some cases.**
+
 * **Overpopulation is the most nihilistic lie ever told**
   * The entire human population could be condensed to fit within Central Park if you account for human density and volume.
   * In reality we are facing a population decline so severe that entire ethnic groups and cultures could be wiped out in the long run if nothing is done to reverse it.

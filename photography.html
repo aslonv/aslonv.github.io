@@ -181,7 +181,7 @@
             100% { background-position: -200% 0; }
         }
 
-        /* Modal Styles - Fixed */
+        /* Modal Styles - Enhanced with carousel */
         .modal {
             display: none;
             position: fixed;
@@ -198,21 +198,22 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 90vw;
-            max-height: 90vh;
+            transform: translate(-50%, -55%); /* Slightly higher to make room for carousel */
+            max-width: 85vw;
+            max-height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .modal img {
-            max-width: 90vw;
-            max-height: 90vh;
+            max-width: 85vw;
+            max-height: 70vh;
             width: auto;
             height: auto;
             object-fit: contain;
             border-radius: 8px;
+            transition: opacity 0.3s ease;
         }
 
         .modal-close {
@@ -253,7 +254,7 @@
             cursor: pointer;
             border-radius: 50%;
             transition: all 0.3s ease;
-            opacity: 0.8;
+            opacity: 0.6;
             z-index: 1002;
             display: flex;
             align-items: center;
@@ -275,8 +276,115 @@
             right: 30px;
         }
 
+        /* Image Carousel at bottom */
+        .modal-carousel {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 800px;
+            height: 120px;
+            z-index: 1001;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 10px;
+            height: 90px;
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            align-items: center;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            opacity: 0.6;
+            transform: scale(0.9);
+            border: 2px solid transparent;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+            transform: scale(1.1);
+            border: 2px solid #fff;
+            box-shadow: 0 4px 20px rgba(255,255,255,0.3);
+        }
+
+        .carousel-item:hover:not(.active) {
+            opacity: 0.8;
+            transform: scale(0.95);
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Carousel navigation buttons */
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.6);
+            border: none;
+            color: #fff;
+            font-size: 1.2rem;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-nav:hover {
+            opacity: 1;
+            background: rgba(0,0,0,0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-prev {
+            left: -5px;
+        }
+
+        .carousel-next {
+            right: -5px;
+        }
+
         /* Mobile modal adjustments */
         @media (max-width: 768px) {
+            .modal-content {
+                max-width: 95vw;
+                max-height: 60vh;
+                transform: translate(-50%, -60%);
+            }
+            
+            .modal img {
+                max-width: 95vw;
+                max-height: 60vh;
+            }
+            
             .modal-close {
                 top: 20px;
                 right: 20px;
@@ -289,6 +397,7 @@
                 width: 50px;
                 height: 50px;
                 font-size: 1.5rem;
+                opacity: 0.4;
             }
             
             .modal-prev {
@@ -299,9 +408,27 @@
                 right: 20px;
             }
             
-            .modal img {
-                max-width: 95vw;
-                max-height: 85vh;
+            .modal-carousel {
+                bottom: 20px;
+                width: 95%;
+                height: 100px;
+            }
+            
+            .carousel-container {
+                padding: 10px;
+            }
+            
+            .carousel-track {
+                height: 70px;
+            }
+            
+            .carousel-item {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .carousel-item.active {
+                transform: scale(1.05);
             }
         }
 
@@ -364,6 +491,17 @@
         <button class="modal-nav modal-next" onclick="nextImage(event)">&#8250;</button>
         <div class="modal-content">
             <img id="modalImage" src="" alt="">
+        </div>
+        
+        <!-- Image Carousel -->
+        <div class="modal-carousel">
+            <div class="carousel-container">
+                <button class="carousel-nav carousel-prev" onclick="scrollCarousel(-1)">&#8249;</button>
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Carousel items will be populated by JavaScript -->
+                </div>
+                <button class="carousel-nav carousel-next" onclick="scrollCarousel(1)">&#8250;</button>
+            </div>
         </div>
     </div>
 

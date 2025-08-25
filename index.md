@@ -10,8 +10,8 @@ title: "Bekali Aslonov"
 ## Some things about me:
 
 * Grew up in Tashkent, Uzbekistan
-* [📸 Side Photography](photography.html)
-* Attended Politecnico di Torino and Georgetown SFS
+* [Side Photography](photography.html)
+* Attended [Politecnico di Torino][https://www.polito.it/] and [Georgetown SFS Qatar][https://www.qatar.georgetown.edu/]
 * Demonstrated track record in math olympiads, competitive programming (ICPC), and multiple international hackathons
 
 ## Things that I believe as true:

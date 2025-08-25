@@ -10,8 +10,8 @@ title: "Bekali Aslonov"
 ## Some things about me:
 
 * Grew up in Tashkent, Uzbekistan
-* Studying Computer Engineering at Politecnico di Torino. Attended Georgetown School of Foreign Service in Qatar, economics program
-* Background in maths olympiads and competitive programming
+* Studied Computer Engineering at Politecnico di Torino. Attended Georgetown School of Foreign Service in Qatar, Economics program
+* Demonstrated Background in mathematical olympiads and competitive programming (iCPC)
 
 ## Things that I believe as true:
 

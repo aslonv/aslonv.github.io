@@ -5,7 +5,7 @@ title: "Bekali Aslonov"
 
 # Bekali Aslonov
 
-*systems & engineering*
+*algorithms, systems, engineering*
 
 ## Some things about me:
 

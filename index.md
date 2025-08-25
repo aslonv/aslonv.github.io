@@ -19,7 +19,7 @@ title: "Bekali Aslonov"
   * It's extremely important to be conscious about what one is doing it, what for, why, and what is the direction they are moving to.
   * It might be highly uncertain in the beginning what is worth working on, what is worth making effort for, in a focused and consistent way
   * In order to clarify what to work on, one might have to talk to and learn from as many people as possible from all walks of life, from the industries, try out different things while being intentional about each effort and keep record of what happened, what was learned, what was gained, and what's the next move.
-    
+
 --
 
 * **Earth's resources are abundant**

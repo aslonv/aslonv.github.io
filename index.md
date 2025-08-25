@@ -84,6 +84,7 @@ title: "Bekali Aslonov"
 * Building privacy-preserving identity system with zero-knowledge proofs
 * Experimenting with edge node running AI inference via mobile phone compute resources
 
-## Repos:
+## Links:
 
 * GitHub: [github.com/aslonv](https://github.com/aslonv)
+* LinkedIn: [linkedin.com/in/aslonv](https://linkedin.com/in/aslonv)

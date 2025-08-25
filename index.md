@@ -129,9 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 * **Most limitations are social conventions. Physics is the law, everything else is recommendation**
     
-### Current side projects:
-* Building privacy-preserving identity system with zero-knowledge proofs
-* Experimenting with edge node running AI inference via mobile phone compute resources
 ## Links:
 * GitHub: [github.com/aslonv](https://github.com/aslonv)
 * LinkedIn: [linkedin.com/in/aslonv](https://linkedin.com/in/aslonv)

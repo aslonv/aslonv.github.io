@@ -153,7 +153,7 @@
             transition: none;
         }
 
-        /* Skeleton loader - FIXED */
+        /* Skeleton loader */
         .photo-item::before {
             content: '';
             position: absolute;
@@ -173,17 +173,8 @@
             animation-play-state: paused;
         }
 
-        /* Hide skeleton when image is loaded - FIXED */
         .photo-item.loaded::before {
             display: none;
-        }
-
-        .photo-item img[data-loaded="false"] {
-            opacity: 0;
-        }
-
-        .photo-item img[data-loaded="true"] {
-            opacity: 1;
         }
 
         @keyframes loading {
@@ -191,80 +182,74 @@
             100% { background-position: -200% 0; }
         }
 
-        /* Modal Styles - Enhanced with carousel */
+        /* Simple Modal - No Carousel */
         .modal {
             display: none;
             position: fixed;
             z-index: 1000;
             left: 0;
             top: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             background: rgba(0,0,0,0.95);
-            backdrop-filter: blur(10px);
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -55%); /* Slightly higher to make room for carousel */
-            max-width: 85vw;
-            max-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            cursor: zoom-out;
         }
 
         .modal img {
-            max-width: 85vw;
-            max-height: 70vh;
-            width: auto;
-            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90vw;
+            max-height: 90vh;
             object-fit: contain;
             border-radius: 8px;
-            transition: opacity 0.3s ease;
+            cursor: default;
         }
 
+        /* X Close Button */
         .modal-close {
             position: fixed;
             top: 30px;
             right: 30px;
             color: #fff;
-            font-size: 2.5rem;
+            font-size: 3rem;
             cursor: pointer;
             z-index: 1002;
             opacity: 0.8;
-            transition: opacity 0.3s ease;
-            background: rgba(0,0,0,0.5);
-            width: 50px;
-            height: 50px;
+            transition: all 0.3s ease;
+            background: rgba(0,0,0,0.6);
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 300;
+            line-height: 1;
         }
 
         .modal-close:hover {
             opacity: 1;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.8);
+            transform: scale(1.1);
         }
 
+        /* Left/Right Arrow Navigation */
         .modal-nav {
             position: fixed;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.6);
             border: none;
             color: #fff;
-            font-size: 2rem;
-            width: 60px;
-            height: 60px;
+            font-size: 2.5rem;
+            width: 70px;
+            height: 70px;
             cursor: pointer;
             border-radius: 50%;
             transition: all 0.3s ease;
-            opacity: 0.6;
+            opacity: 0.8;
             z-index: 1002;
             display: flex;
             align-items: center;
@@ -274,7 +259,7 @@
 
         .modal-nav:hover {
             opacity: 1;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.8);
             transform: translateY(-50%) scale(1.1);
         }
 
@@ -284,162 +269,6 @@
 
         .modal-next {
             right: 30px;
-        }
-
-        /* Image Carousel at bottom */
-        .modal-carousel {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 800px;
-            height: 120px;
-            z-index: 1001;
-        }
-
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            border-radius: 12px;
-            background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(10px);
-            padding: 15px;
-        }
-
-        .carousel-track {
-            display: flex;
-            gap: 10px;
-            height: 90px;
-            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            align-items: center;
-        }
-
-        .carousel-item {
-            flex: 0 0 auto;
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            opacity: 0.6;
-            transform: scale(0.9);
-            border: 2px solid transparent;
-        }
-
-        .carousel-item.active {
-            opacity: 1;
-            transform: scale(1.1);
-            border: 2px solid #fff;
-            box-shadow: 0 4px 20px rgba(255,255,255,0.3);
-        }
-
-        .carousel-item:hover:not(.active) {
-            opacity: 0.8;
-            transform: scale(0.95);
-        }
-
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Carousel navigation buttons */
-        .carousel-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.6);
-            border: none;
-            color: #fff;
-            font-size: 1.2rem;
-            width: 35px;
-            height: 35px;
-            cursor: pointer;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            opacity: 0.7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .carousel-nav:hover {
-            opacity: 1;
-            background: rgba(0,0,0,0.8);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .carousel-prev {
-            left: -5px;
-        }
-
-        .carousel-next {
-            right: -5px;
-        }
-
-        /* Mobile modal adjustments */
-        @media (max-width: 768px) {
-            .modal-content {
-                max-width: 95vw;
-                max-height: 60vh;
-                transform: translate(-50%, -60%);
-            }
-            
-            .modal img {
-                max-width: 95vw;
-                max-height: 60vh;
-            }
-            
-            .modal-close {
-                top: 20px;
-                right: 20px;
-                width: 45px;
-                height: 45px;
-                font-size: 2rem;
-            }
-            
-            .modal-nav {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-                opacity: 0.4;
-            }
-            
-            .modal-prev {
-                left: 20px;
-            }
-            
-            .modal-next {
-                right: 20px;
-            }
-            
-            .modal-carousel {
-                bottom: 20px;
-                width: 95%;
-                height: 100px;
-            }
-            
-            .carousel-container {
-                padding: 10px;
-            }
-            
-            .carousel-track {
-                height: 70px;
-            }
-            
-            .carousel-item {
-                width: 60px;
-                height: 60px;
-            }
-            
-            .carousel-item.active {
-                transform: scale(1.05);
-            }
         }
 
         /* Responsive */
@@ -460,6 +289,28 @@
             
             .container {
                 padding: 0 1rem;
+            }
+
+            .modal-close {
+                top: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 2.5rem;
+            }
+            
+            .modal-nav {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+            
+            .modal-prev {
+                left: 20px;
+            }
+            
+            .modal-next {
+                right: 20px;
             }
         }
     </style>
@@ -494,32 +345,19 @@
         </section>
     </div>
 
-    <!-- Modal -->
+    <!-- Simple Modal -->
     <div id="photoModal" class="modal" onclick="closeModal(event)">
-        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <span class="modal-close" onclick="closeModal(event)">&times;</span>
         <button class="modal-nav modal-prev" onclick="previousImage(event)">&#8249;</button>
         <button class="modal-nav modal-next" onclick="nextImage(event)">&#8250;</button>
-        <div class="modal-content">
-            <img id="modalImage" src="" alt="">
-        </div>
-        
-        <!-- Image Carousel -->
-        <div class="modal-carousel">
-            <div class="carousel-container">
-                <button class="carousel-nav carousel-prev" onclick="scrollCarousel(-1)">&#8249;</button>
-                <div class="carousel-track" id="carouselTrack">
-                    <!-- Carousel items will be populated by JavaScript -->
-                </div>
-                <button class="carousel-nav carousel-next" onclick="scrollCarousel(1)">&#8250;</button>
-            </div>
-        </div>
+        <img id="modalImage" src="" alt="">
     </div>
 
     <script>
         let currentImageIndex = 0;
         let currentImages = [];
 
-        // Complete list of all your images (from your update_images.sh script)
+        // Complete list of all your images
         const italyImages = [
             '20230409_202913.jpg',
             '20230414_190355.jpg',
@@ -558,7 +396,6 @@
         let scrollTimer;
         let isScrolling = false;
 
-        // Detect scrolling and disable heavy animations
         window.addEventListener('scroll', () => {
             if (!isScrolling) {
                 document.body.classList.add('scrolling');
@@ -619,53 +456,59 @@
                 }
 
                 img.onload = function() {
-                    requestAnimationFrame(() => {
-                        this.setAttribute('data-loaded', 'true');
-                        this.style.opacity = '1';
-                        // FIXED: Hide skeleton loader by adding class to parent
-                        if (photoItem) {
-                            photoItem.classList.add('loaded');
-                        }
-                    });
+                    this.setAttribute('data-loaded', 'true');
+                    this.style.opacity = '1';
+                    if (photoItem) {
+                        photoItem.classList.add('loaded');
+                    }
                 };
                 
                 img.onerror = function() {
                     // Fallback for missing images
                     this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUwIiBoZWlnaHQ9IjI2MyIgdmlld0JveD0iMCAwIDM1MCAyNjMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzNTAiIGhlaWdodD0iMjYzIiBmaWxsPSIjMmEyYTJhIi8+CjxwYXRoIGQ9Ik0xNzUgMTMxLjVMMTQwIDk2LjVMMTIwIDExNi41TDEwMCA5Ni5MNzAgMTI2TDcwIDE5NkgyODBMMjMwIDEzMS41TDIwMCAxNjEuNUwxNzUgMTMxLjVaIiBmaWxsPSIjNDA0MDQwIi8+CjxjaXJjbGUgY3g9IjI1MCIgY3k9IjgwIiByPSIyMCIgZmlsbD0iIzQwNDA0MCIvPgo8dGV4dCB4PSIxNzUiIHk9IjE0MCIgZmlsbD0iIzY2NjY2NiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JbWFnZSBOb3QgRm91bmQ8L3RleHQ+Cjwvc3ZnPgo=';
-                    requestAnimationFrame(() => {
-                        this.setAttribute('data-loaded', 'true');
-                        this.style.opacity = '1';
-                        if (photoItem) {
-                            photoItem.classList.add('loaded');
-                        }
-                    });
+                    this.setAttribute('data-loaded', 'true');
+                    this.style.opacity = '1';
+                    if (photoItem) {
+                        photoItem.classList.add('loaded');
+                    }
                 };
                 
-                // Force load if src is already set (cached images)
+                // Force load if already cached
                 if (img.complete && img.naturalHeight !== 0) {
                     img.onload();
                 }
             });
         }
 
+        // Simple Modal Functions
         function openModal(element) {
             const img = element.querySelector('img');
             const modal = document.getElementById('photoModal');
             const modalImg = document.getElementById('modalImage');
             
-            // Get all images for navigation
+            if (!img || !modal || !modalImg) {
+                return;
+            }
+
+            // Get all loaded images for navigation
             const section = element.closest('.country-section');
-            currentImages = Array.from(section.querySelectorAll('.photo-item img'));
+            currentImages = Array.from(section.querySelectorAll('.photo-item img')).filter(image => 
+                image.getAttribute('data-loaded') === 'true'
+            );
             currentImageIndex = currentImages.indexOf(img);
-            
+
+            if (currentImageIndex === -1) {
+                return;
+            }
+
+            // Set modal image
             modalImg.src = img.src;
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal(event) {
-            if (event && event.target !== event.currentTarget) return;
-            
+            event.stopPropagation();
             const modal = document.getElementById('photoModal');
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
@@ -673,12 +516,16 @@
 
         function nextImage(event) {
             event.stopPropagation();
+            if (currentImages.length === 0) return;
+            
             currentImageIndex = (currentImageIndex + 1) % currentImages.length;
             document.getElementById('modalImage').src = currentImages[currentImageIndex].src;
         }
 
         function previousImage(event) {
             event.stopPropagation();
+            if (currentImages.length === 0) return;
+            
             currentImageIndex = currentImageIndex === 0 ? currentImages.length - 1 : currentImageIndex - 1;
             document.getElementById('modalImage').src = currentImages[currentImageIndex].src;
         }
@@ -687,7 +534,7 @@
         document.addEventListener('keydown', function(e) {
             const modal = document.getElementById('photoModal');
             if (modal.style.display === 'block') {
-                if (e.key === 'Escape') closeModal();
+                if (e.key === 'Escape') closeModal(e);
                 if (e.key === 'ArrowRight') nextImage(e);
                 if (e.key === 'ArrowLeft') previousImage(e);
             }

@@ -3,18 +3,18 @@ layout: page
 title: "Bekali Aslonov"
 ---
 
-# Bekali Aslonov
+## Bekali Aslonov
 
 *algorithms, systems, engineering*
 
-##№ Some things about me:
+### Some things about me:
 
 * Grew up in Tashkent, Uzbekistan
 * [Side Photography](photography.html)
 * Attended [Politecnico di Torino](https://www.polito.it/) and [Georgetown SFS Qatar](https://www.qatar.georgetown.edu/)
 * Demonstrated track record in math olympiads, competitive programming (ICPC), and multiple international hackathons
 
-##№ Things I take as true:
+### Things I take as true:
 
 * **Part of working hard is figuring out what to work on**
   * It's extremely important to be conscious about what one is doing it, what for, why, and what is the direction they are moving to.
@@ -80,7 +80,7 @@ title: "Bekali Aslonov"
   * The permission you're waiting for will never come — ship it
 
 
-## Current side projects:
+### Current side projects:
 
 * Building privacy-preserving identity system with zero-knowledge proofs
 * Experimenting with edge node running AI inference via mobile phone compute resources

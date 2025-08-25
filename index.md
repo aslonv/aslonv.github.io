@@ -128,6 +128,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 * **Most limitations are social conventions. Physics is the law, everything else is recommendation**
+
+--
+
+* **Product Philosophies: Bad Examples**
+    * Having non-technical leadership in a technology Company. Tim Cook as the CEO. Extremely restrictive and non-developer friendly App Store policies. Grok app not showing up in the top and recommendations depiste having 4.9 Score ranking from 1 mln+ testimonials. Apple completely giving up on AI race, despite being one of the pioneers in intelligent voice system decades ago. 
+    * Having leadership that prioritizes profit and glory over ethics. Sam Altman completely messing up OpenAi new release demonstrations. Turning OpenAI from non-profit model to for profit. Losing best of its researchers and technical staff. Don't be like Sam.
+    * Waymo FSD, reluctancy to acknowledge the advantage of cameras and computer vision over LiDAR. 
+
     
 ## Links:
 * GitHub: [github.com/aslonv](https://github.com/aslonv)

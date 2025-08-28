@@ -131,10 +131,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 --
 
-* **Product Philosophies: Bad Examples**
-    * Having non-technical leadership in a technology Company. Tim Cook as the CEO. Extremely restrictive and non-developer friendly App Store policies. Grok app not showing up in the top and recommendations depiste having 4.9 Score ranking from 1 mln+ testimonials. Apple completely giving up on AI race, despite being one of the pioneers in intelligent voice system decades ago. 
-    * Having leadership that prioritizes profit and glory over ethics. Sam Altman completely messing up OpenAi new release demonstrations. Turning OpenAI from non-profit model to for profit. Losing best of its researchers and technical staff. Don't be like Sam.
-    * Waymo FSD, reluctancy to acknowledge the advantage of cameras and computer vision over LiDAR. 
+* **Product & Innovation Leadership Philosophies: Bad Examples**
+    * Apple - Non-technical CEO running a tech company into the ground on innovation. Went from pioneering Siri and intelligent voice systems to completely missing the AI revolution. All AI development needs was throwing a lot of money and hiring the right people. Plus their App Store has become a developer-hostile mess where apps with 4.9 stars and million+ reviews (like Grok App) don't show up in recommendations, giving priority to ChatGPT. 
+    * OpenAI - Perfect example of leadership prioritizing profit and ego over ethics. Transformed a non-profit meant to open-source AI into a cash machine. Messed up with the latest product demos, lost most of their top researchers.
+    * Waymo - Despite clear advantages of cameras and computer vision, they're still doubling down on expensive LiDAR tech. 
 
     
 ## Links:

@@ -107,10 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
 ### Some things about me:
 * Grew up in Tashkent, Uzbekistan
 * [Side Photography](photography.html)
-* Attended [Politecnico di Torino](https://www.polito.it/) and [Georgetown SFS Qatar](https://www.qatar.georgetown.edu/)
-* Demonstrated track record in math olympiads, competitive programming (ICPC), and multiple international hackathons
   
-### Truths:
+### Truths that are important to state:
 
 * **Perceived global resource scarcity often stems from inequality in distribution, governmental mismanagement, and geopolitical conflicts, not absolute shortages, as policies in exporting countries artificially create limitations.**
 
